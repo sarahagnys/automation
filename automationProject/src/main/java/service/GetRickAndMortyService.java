@@ -3,7 +3,7 @@ package service;
 import models.response.ReturnResponse;
 import static config.Config.environmentModel;
 
-public class GetRickAndMorty extends TestSupportService {
+public class GetRickAndMortyService extends TestSupportService {
 
     public void GetRickAndMortyApi(String endpoint, String id) {
         final String url = environmentModel.getRickAndMortyLocal() + endpoint + "/" + id;
