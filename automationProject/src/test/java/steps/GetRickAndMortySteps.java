@@ -1,5 +1,6 @@
 package steps;
 
+import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import models.response.ReturnResponse;
@@ -22,5 +23,10 @@ public class GetRickAndMortySteps extends TestSupportService {
         ReturnResponse returnResponse = gson.fromJson(response, ReturnResponse.class);
 
         Assert.assertEquals(status, returnResponse.getStatus());
+    }
+
+    @E("o servidor deve me retornar o status code {int}")
+    public void oServidorDeveMeRetornarOStatusCode(int statusCode) {
+        Assert.assertEquals(statusCode, getResponseTestContext().statusCode());
     }
 }
