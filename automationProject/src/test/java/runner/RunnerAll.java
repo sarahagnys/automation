@@ -11,7 +11,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 @RunWith(Cucumber.class)
 @CucumberOptions(tags = "@RickAndMorty",
         snippets = CAMELCASE,
-        features = "src/test/resources/features")
+        features = "src/test/resources")
 
 public class RunnerAll {
 }
